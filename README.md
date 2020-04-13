@@ -18,6 +18,8 @@ allprojects {
 	}
 ```
 
+[![](https://jitpack.io/v/zhujiang521/Player.svg)](https://jitpack.io/#zhujiang521/Player)
+
 然后在需要使用的module的build.gradle中添加下面的依赖：
 
 ```
