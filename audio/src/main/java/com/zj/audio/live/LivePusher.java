@@ -1,6 +1,7 @@
 package com.zj.audio.live;
 
 import android.app.Activity;
+import android.util.Log;
 import android.view.SurfaceHolder;
 
 import com.zj.audio.live.channel.AudioChannel;

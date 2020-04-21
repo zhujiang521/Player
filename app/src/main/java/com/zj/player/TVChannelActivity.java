@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
 import com.zj.audio.LiveRecording;
+import com.zj.audio.live.ScreenUtilsKt;
 import com.zj.play.BroadcastLive;
 
 import java.util.ArrayList;
@@ -66,9 +67,9 @@ public class TVChannelActivity extends AppCompatActivity {
 
     public void startAudit(View view) {
         LiveRecording.create(this).setDataUrl("rtmp://192.168.8.44/myapp/mystream")
-                .setWidth(800)
-                .setHeight(400)
-                .setFps(10)
+                .setWidth(ScreenUtilsKt.getAppScreenWidth(this))
+                .setHeight(ScreenUtilsKt.getAppScreenHeight(this))
+                .setFps(26)
                 .setBitrate(800_000)
                 .build();
     }

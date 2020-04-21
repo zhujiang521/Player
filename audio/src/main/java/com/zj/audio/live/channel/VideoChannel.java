@@ -2,6 +2,7 @@ package com.zj.audio.live.channel;
 
 import android.app.Activity;
 import android.hardware.Camera;
+import android.util.Log;
 import android.view.SurfaceHolder;
 
 import com.zj.audio.live.LivePusher;
@@ -56,6 +57,7 @@ public class VideoChannel implements Camera.PreviewCallback, CameraHelper.OnChan
      */
     @Override
     public void onChanged(int w, int h) {
+        Log.e("真实摄像头数据的宽", "onChanged: "+w+"    ddd   "+h );
         //初始化编码器
         mLivePusher.native_setVideoEncInfo(w, h, mFps, mBitrate);
     }
